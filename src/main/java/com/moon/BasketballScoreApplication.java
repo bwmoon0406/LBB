@@ -1,4 +1,4 @@
-package com.moon.LBB;
+package com.moon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
