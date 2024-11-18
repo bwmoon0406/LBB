@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>회원가입</title>
+    <style>
+        .signupButton {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        text-decoration: none; /* 밑줄 제거 */
+        background-color: #007bff; /* 버튼 색상 */
+        border-radius: 5px; /* 둥근 모서리 */
+        border: none;
+        }
+    </style>
+</head>
+<body>
+<h2>회원가입</h2>
+<form action="signup" method="post">
+    <!-- HTML 주석 -->
+    <label for="userId">아이디 : </label>
+    <input type="text" id="userId" name="userId" placeholder="6 ~ 12 자리 사용가능" required><button id="idDuplicateCheck"></button><br>
+    <div id="idStatusMsg"></div>
+
+    <label for="userPassword">비밀번호 : </label>
+    <input type="text" id="userPassword" name="userPassword" placeholder="비밀번호 입력" required><br>
+    <div id="passwordCondition">8 ~ 12자 알파벳 + 숫자 조합 사용가능</div><br>
+
+    <label for="userPasswordCheck">비밀변호확인 : </label>
+    <input type="text" id="userPasswordCheck" name="userPasswordCheck" placeholder="비밀번호 확인" required><br>
+
+    <a th:href="@{/signup}" class="signupButton"> 회원가입 </a>
+</form>
+<script>
+    /*
+        중복확인 버튼
+        기능
+        1. 사용자가 입력한 id값의 패턴이 유효한지 확인
+        2. 사용자가 입력한 id값이 기존 사용자의 id값과 중복되는지 확인
+        3. 1,2의 상태에 따라 알맞은 답변을 생성
+
+    */
+</script>
+</body>
+
+</html>

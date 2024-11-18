@@ -13,6 +13,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests(authorize -> authorize
+                        .requestMatchers("/", "/login", "/signup").permitAll() // 해당 URL을 인증없이 누구나 접근가능하게 허용
                         .anyRequest().authenticated() // 모든 요청에 대해 인증을 요구
                 )
                 .formLogin(formLogin -> formLogin
