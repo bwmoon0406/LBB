@@ -16,4 +16,13 @@ public class LoginController {
         return "signup";
     }
 
+    @GetMapping("/find-id")
+    public String showFindIdPage() {
+        return "find-id";
+    }
+
+    @GetMapping("/find-pw")
+    public String showFindPwPage() {
+        return "find-pw";
+    }
 }

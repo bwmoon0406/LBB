@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>아이디 찾기</title>
+</head>
+<body>
+    <form action="/findid" method="post">
+        <label for="userEmail">이메일 : </label>
+        <input type="email" id="userEmail" name="userEmail" placeholder="예시@example.com" required>
+        <br>
+
+        <label for="userTeamName">팀명 : </label>
+        <input type="text" id="userTeamName" name="userTeamName" required>
+        <button type="button" id="findIdBtn">찾기</button>
+        <br>
+        <div id="btnStatusMsg"></div>
+
+        <div id="findIdMsg"></div>
+    </form>
+    <a href="/login">로그인</a>
+    <a href="/findpw">비밀번호 찾기</a>
+</body>
+</html>
